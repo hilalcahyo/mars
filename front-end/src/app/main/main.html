@@ -20,9 +20,18 @@
     <div class="panel-heading">Post A message</div>
     <div class="panel-body">
       <div class="input-group">
-        <textarea class="form-control custom-control" rows=3 style="resize:none"></textarea>
+        <textarea class="form-control custom-control" ng-model="main.message" rows=3 style="resize:none"></textarea>
         <span class="label label-default">masukan pesan</span>
-        <span class="input-group-addon btn btn-primary" ng-click="kodok.postMessage()">post</span>
+        <span class="input-group-addon btn btn-primary" ng-click="main.postMessage()">post</span>
       </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">Message</div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="message in main.messages">
+              {{message.msg}}
+            </li>
+        </ul>
   </div>
 </div>

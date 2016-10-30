@@ -5,7 +5,14 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       url: '/',
       templateUrl: 'app/main/main.html',
       controller: 'MainController',
-      controllerAs: 'kodok'
+      controllerAs: 'main'
+    })
+
+    .state('auth', {
+      url: '/auth',
+      templateUrl: 'app/auth/auth.html',
+      controller: 'AuthController',
+      controllerAs: 'auth'
     });
 
   $urlRouterProvider.otherwise('/');
